@@ -1,0 +1,91 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #a5182d;
+  height: 100%;
+  margin-top: 0;
+}
+
+#brownbackground{
+  background-color: #3d3935;
+  width: 90%;
+  height: 92%;
+  padding-top: 5px;
+  margin: auto;
+}
+
+#Contents{
+  background-color: white;
+  height: 92%;
+  padding-left: 20px;
+  padding-right: 350px;
+}
+
+h1 {
+  font-family: "DINWebBold", sans-serif;
+  padding-top: 50px;
+}
+
+#weight {
+  background-color: #a5182d;
+  color: white;
+  position: absolute;
+  bottom: 180px;
+  right: 690px;
+}
+
+#Mean {
+  background-color: #a5182d;
+  color: white;
+  position: absolute;
+  bottom: 180px;
+  right: 625px;
+}
+
+.calculator{
+  background-color: #e8eef0;
+  height: 80%;
+  padding-top: 5px;
+  width: 90%;
+}
+
+.text{
+  margin-left: 10px;
+}
+
+.header{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #a5182d;
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 98%;
+  height: 60%;
+  table-layout: fixed;
+}
+
+td {
+  border: 1px solid black;
+  text-align: left;
+  height: 100px;
+  padding-left: 10px;
+}
+
+th,thead{
+  border: 1px solid black;
+  text-align: left;
+  height: 30px;
+  background-color: lightgrey;
+  padding-left: 10px;
+}
+
+input{
+  height: 25px;
+  width: 125px;
+}
