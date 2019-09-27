@@ -29,36 +29,37 @@
             <td>Activity 1</td>
             <td>A1</td>
             <td><input class = "weightscores" type="number"</input></td>
-            <td><input type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input type="number" oninput="calculatepercentage(this)"</input></td>
+            <td><input class = "scores" type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input class = "scores" type="number" oninput="calculatepercentage(this)"</input></td>
             <td><p class = "percentage"></p></td>
           </tr>
           <tr>
             <td>Activity 2</td>
             <td>A1</td>
             <td><input class = "weightscores" type="number"</input></td>
-            <td><input type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input type="number" oninput="calculatepercentage(this)"</input></td>
+            <td><input class = "scores" type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input class = "scores" type="number" oninput="calculatepercentage(this)"</input></td>
             <td><p class = "percentage"></p></td>
           </tr>
           <tr>
             <td>Activity 3</td>
             <td>A1</td>
             <td><input class = "weightscores" type="number"</input></td>
-            <td><input type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input type="number" oninput="calculatepercentage(this)"</input></td>
+            <td><input class = "scores" type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input class = "scores" type="number" oninput="calculatepercentage(this)"</input></td>
             <td><p class = "percentage"></p></td>
           </tr>
           <tr>
             <td>Activity 4</td>
             <td>A1</td>
             <td><input class = "weightscores" type="number"</input></td>
-            <td><input type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input type="number" oninput="calculatepercentage(this)"</input></td>
+            <td><input class = "scores" type="number" oninput="calculatepercentage(this)"</input> /<div style = "padding-top: 10px;"></div><input class = "scores" type="number" oninput="calculatepercentage(this)"</input></td>
             <td><p class = "percentage"></p></td>
           </tr>
       </table>
       <p class = "header">
         Result </p>
-      <p id = "result"></p>
+      <p id = "result"></p> <p id = "lettergrade"></p>
       <button id = "weight" type = "button" onclick="weightedgrades()"> WEIGHTED </button>
       <button id = "Mean" type = "button" onclick="meangrades()"> MEAN </button>
+      <button id = 'reset' type ="button" onclick="resetboxes()"> RESET </button>
     </div>
     </div>
   </div>
