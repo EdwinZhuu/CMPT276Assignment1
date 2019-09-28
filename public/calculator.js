@@ -49,7 +49,6 @@ function weightedgrades(){
     }
   }
   if (count == 0){
-    console.log(count)
     document.getElementById('result').innerHTML = ''
   } else {
     total = total/count
@@ -98,7 +97,11 @@ function resetboxes(){
   for (var x = 0; x<8; x++){
     if (!isNaN(scores[x].valueAsNumber)){
       scores[x].value = ''
-      percentage[x].innerHTML = ''
+    }
+  }
+  for (var m = 0; m<4; m++){
+    if ((percentage[m].innerHTML != '')){
+      percentage[m].innerHTML = ''
     }
   }
   document.getElementById('result').innerHTML = ''
