@@ -8,7 +8,7 @@ function calculatepercentage(variable){
   var firstinput = child[0].valueAsNumber
   var secondinput = child[3].valueAsNumber
   if (!isNaN(firstinput) && !isNaN(secondinput) && firstinput >= 0 && secondinput > 0){
-    x[4].children[0].innerHTML = '%' + firstinput/secondinput*100
+    x[4].children[0].innerHTML =  firstinput/secondinput*100 + "%"
   } else {
     x[4].children[0].innerHTML = ""
   }
@@ -19,18 +19,20 @@ function meangrades(){
   var count = 0
   var total = 0
   for (var i = 0; i<4; i++){
-    if (x[i].innerHTML != ''){
+    var length = (x[i].innerHTML.length - 1)
+    var substring = x[i].innerHTML.substring(0,length)
+    if (substring != ''){
       count = count + 1
-      total = total + Number(x[i].innerHTML)
+      total = total + Number(substring)
     }
   }
   if (count == 0){
     document.getElementById('result').innerHTML = ''
   } else {
     total = total/count
-    document.getElementById('result').innerHTML = total*100 + '/100'
+    document.getElementById('result').innerHTML = total + '/100'
   }
-  document.getElementById('lettergrade').innerHTML = getlettergrade(total*100)
+  document.getElementById('lettergrade').innerHTML = getlettergrade(total)
 }
 
 function weightedgrades(){
@@ -39,9 +41,11 @@ function weightedgrades(){
   var total = 0
   var count = 0
   for (var i = 0; i<4; i++){
-    if (percentages[i].innerHTML != '' &&  !isNaN(weights[i].valueAsNumber)){
+    var length = (percentages[i].innerHTML.length - 1)
+    var substring = percentages[i].innerHTML.substring(0,length)
+    if (substring != '' &&  !isNaN(weights[i].valueAsNumber)){
       count = count + weights[i].valueAsNumber
-      total = total + (Number(percentages[i].innerHTML) * weights[i].valueAsNumber)
+      total = total + (Number(substring) * weights[i].valueAsNumber)
     }
   }
   if (count == 0){
@@ -49,9 +53,9 @@ function weightedgrades(){
     document.getElementById('result').innerHTML = ''
   } else {
     total = total/count
-    document.getElementById('result').innerHTML = total*100 + '/100'
+    document.getElementById('result').innerHTML = total + '/100'
   }
-  document.getElementById('lettergrade').innerHTML = getlettergrade(total*100)
+  document.getElementById('lettergrade').innerHTML = getlettergrade(total)
 }
 
 function getlettergrade(percentage){
