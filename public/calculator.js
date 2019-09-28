@@ -7,8 +7,8 @@ function calculatepercentage(variable){
   var child = x[3].childNodes
   var firstinput = child[0].valueAsNumber
   var secondinput = child[3].valueAsNumber
-  if (!isNaN(firstinput) && !isNaN(secondinput)){
-    x[4].children[0].innerHTML = firstinput/secondinput
+  if (!isNaN(firstinput) && !isNaN(secondinput) && firstinput >= 0 && secondinput > 0){
+    x[4].children[0].innerHTML = '%' + firstinput/secondinput*100
   } else {
     x[4].children[0].innerHTML = ""
   }
